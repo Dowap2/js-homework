@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/index.css" />
+    <script src="./js/index.js"></script>
     <title>캐러셀 컴포넌트</title>
   </head>
   <body>
     <div class="carousel-container">
       <div class="carousel-header">
-        <img
-          src="./assets/game_icon.png"
-          class="carousel-header-icon"
-          alt="헤더 아이콘"
-        />
-        <p class="carousel-header-content">추천 게임</p>
-        <img src="./assets/all.png" class="carousel-header-all" alt="" />
+        <div class="carousel-header-content">
+          <img
+            src="./assets/game_icon.png"
+            class="carousel-header-icon"
+            alt="헤더 아이콘"
+          />
+          <p class="carousel-header-title">추천 게임</p>
+          <img
+            src="./assets/all.png"
+            class="carousel-header-all"
+            alt="show-all"
+          />
+        </div>
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track" id="carouselTrack">
@@ -61,44 +68,43 @@
               </div>
             </div>
           </div>
-
           <div class="carousel-slide">
             <div class="slide-content">
               <div class="game-container">
                 <div class="game-wrapper">
                   <img
-                    src="./assets/크로노오디세이_배경.png"
+                    src="./assets/패스오브엑자일_배경.png"
                     class="bg-image"
-                    alt="크로노오디세이"
+                    alt="패스오브엑자일"
                   />
                   <img
-                    src="./assets/크로노오디세이_캐릭터.png"
+                    src="./assets/패스오브엑자일_캐릭터.png"
                     class="overlay-image"
-                    alt="크로노오디세이"
+                    alt="패스오브엑자일"
                   />
                 </div>
                 <div class="game-content">
-                  <div class="game-content-title">크로노 오디세이</div>
-                  <div class="game-description">멈춰 있던 시간이 흐른다</div>
-                  <div class="game-genre">MMORPG</div>
+                  <div class="game-content-title">패스 오브 엑자일2</div>
+                  <div class="game-description">얼리 액세스 오픈!</div>
+                  <div class="game-genre">핵앤슬래시</div>
                 </div>
               </div>
               <div class="game-container">
                 <div class="game-wrapper">
                   <img
-                    src="./assets/아키에이지워_배경.png"
+                    src="./assets/오딘_배경.png"
                     class="bg-image"
-                    alt="아키에이지워"
+                    alt="오딘"
                   />
                   <img
-                    src="./assets/아키에이지워_캐릭터.png"
+                    src="./assets/오딘_캐릭터.png"
                     class="overlay-image"
-                    alt="아키에이지워"
+                    alt="오딘"
                   />
                 </div>
                 <div class="game-content">
-                  <div class="game-content-title">아키에이지 워</div>
-                  <div class="game-description">시대의 전설을 향해</div>
+                  <div class="game-content-title">오딘 : 발할라 라이징</div>
+                  <div class="game-description">신의 영역을 차지하라</div>
                   <div class="game-genre">MMORPG</div>
                 </div>
               </div>
@@ -109,40 +115,36 @@
             <div class="slide-content">
               <div class="game-container">
                 <div class="game-wrapper">
+                  <img src="./assets/롬_배경.png" class="bg-image" alt="톰" />
                   <img
-                    src="./assets/크로노오디세이_배경.png"
-                    class="bg-image"
-                    alt="크로노오디세이"
-                  />
-                  <img
-                    src="./assets/크로노오디세이_캐릭터.png"
+                    src="./assets/롬_캐릭터.png"
                     class="overlay-image"
-                    alt="크로노오디세이"
+                    alt="롬"
                   />
                 </div>
                 <div class="game-content">
-                  <div class="game-content-title">크로노 오디세이</div>
-                  <div class="game-description">멈춰 있던 시간이 흐른다</div>
+                  <div class="game-content-title">롬: 리멤버 오브 마제스티</div>
+                  <div class="game-description">세계는 하나의 전장이 된다</div>
                   <div class="game-genre">MMORPG</div>
                 </div>
               </div>
               <div class="game-container">
                 <div class="game-wrapper">
                   <img
-                    src="./assets/아키에이지워_배경.png"
+                    src="./assets/배틀그라운드_배경.png"
                     class="bg-image"
-                    alt="아키에이지워"
+                    alt="배틀그라운드"
                   />
                   <img
-                    src="./assets/아키에이지워_캐릭터.png"
+                    src="./assets/배틀그라운드_캐릭터.png"
                     class="overlay-image"
-                    alt="아키에이지워"
+                    alt="배틀그라운드"
                   />
                 </div>
                 <div class="game-content">
-                  <div class="game-content-title">아키에이지 워</div>
-                  <div class="game-description">시대의 전설을 향해</div>
-                  <div class="game-genre">MMORPG</div>
+                  <div class="game-content-title">배틀그라운드</div>
+                  <div class="game-description">최후까지 생존하라!</div>
+                  <div class="game-genre">배틀로얄</div>
                 </div>
               </div>
             </div>
@@ -158,8 +160,10 @@
         >
           <img src="./assets/left_arrow.png" alt="prev-btn" />
         </button>
-        <span class="current-index" id="currentIndex">1</span>
-        <span class="total-pages">/ <span id="totalPages">3</span></span>
+        <div class="carousel-indicators-view">
+          <span class="current-index" id="currentIndex">1</span>
+          <span class="total-pages">/<span id="totalPages">3</span></span>
+        </div>
         <button
           class="carousel-controls next-btn"
           id="nextBtn"
@@ -169,142 +173,5 @@
         </button>
       </div>
     </div>
-
-    <script>
-      class Carousel {
-        constructor(container) {
-          this.container = container;
-          this.track = container.querySelector("#carouselTrack");
-          this.slides = container.querySelectorAll(".carousel-slide");
-          this.prevBtn = container.querySelector("#prevBtn");
-          this.nextBtn = container.querySelector("#nextBtn");
-          this.currentIndexEl = container.querySelector("#currentIndex");
-          this.totalPagesEl = container.querySelector("#totalPages");
-          this.dots = container.querySelectorAll(".dot");
-
-          this.currentSlide = 0;
-          this.totalSlides = this.slides.length;
-
-          this.init();
-        }
-
-        init() {
-          this.updateDisplay();
-          this.bindEvents();
-          this.updateTotalPages();
-        }
-
-        bindEvents() {
-          // 이전/다음 버튼 이벤트
-          this.prevBtn.addEventListener("click", () => this.goToPrevSlide());
-          this.nextBtn.addEventListener("click", () => this.goToNextSlide());
-
-          // 키보드 네비게이션
-          this.container.addEventListener("keydown", (e) =>
-            this.handleKeydown(e)
-          );
-        }
-
-        handleKeydown(e) {
-          if (e.key === "ArrowLeft") {
-            e.preventDefault();
-            this.goToPrevSlide();
-          } else if (e.key === "ArrowRight") {
-            e.preventDefault();
-            this.goToNextSlide();
-          }
-        }
-
-        goToPrevSlide() {
-          if (this.currentSlide > 0) {
-            this.currentSlide--;
-            this.updateDisplay();
-          }
-        }
-
-        goToNextSlide() {
-          if (this.currentSlide < this.totalSlides - 1) {
-            this.currentSlide++;
-            this.updateDisplay();
-          }
-        }
-
-        goToSlide(index) {
-          if (index >= 0 && index < this.totalSlides) {
-            this.currentSlide = index;
-            this.updateDisplay();
-          }
-        }
-
-        updateDisplay() {
-          // 슬라이드 위치 업데이트
-          const translateX = -this.currentSlide * 100;
-          this.track.style.transform = `translateX(${translateX}%)`;
-
-          // 현재 인덱스 표시 업데이트
-          this.currentIndexEl.textContent = this.currentSlide + 1;
-
-          // 네비게이션 버튼 상태 업데이트
-          this.updateButtonStates();
-        }
-
-        updateButtonStates() {
-          // 이전 버튼 상태
-          if (this.currentSlide === 0) {
-            this.prevBtn.classList.add("disabled");
-            this.prevBtn.setAttribute("disabled", "");
-          } else {
-            this.prevBtn.classList.remove("disabled");
-            this.prevBtn.removeAttribute("disabled");
-          }
-
-          // 다음 버튼 상태
-          if (this.currentSlide === this.totalSlides - 1) {
-            this.nextBtn.classList.add("disabled");
-            this.nextBtn.setAttribute("disabled", "");
-          } else {
-            this.nextBtn.classList.remove("disabled");
-            this.nextBtn.removeAttribute("disabled");
-          }
-        }
-
-        updateDots() {
-          this.dots.forEach((dot, index) => {
-            if (index === this.currentSlide) {
-              dot.classList.add("active");
-            } else {
-              dot.classList.remove("active");
-            }
-          });
-        }
-
-        updateTotalPages() {
-          this.totalPagesEl.textContent = this.totalSlides;
-        }
-
-        // 외부에서 슬라이드를 추가/제거할 때 사용할 메서드
-        refresh() {
-          this.slides = this.container.querySelectorAll(".carousel-slide");
-          this.totalSlides = this.slides.length;
-          this.updateTotalPages();
-
-          // 현재 슬라이드가 범위를 벗어났으면 조정
-          if (this.currentSlide >= this.totalSlides) {
-            this.currentSlide = this.totalSlides - 1;
-          }
-
-          this.updateDisplay();
-        }
-      }
-
-      // 캐러셀 초기화
-      document.addEventListener("DOMContentLoaded", () => {
-        const carouselContainer = document.querySelector(".carousel-container");
-        const carousel = new Carousel(carouselContainer);
-
-        // 전역으로 접근 가능하도록 설정 (개발 및 테스트용)
-        window.carousel = carousel;
-      });
-    </script>
   </body>
 </html>
