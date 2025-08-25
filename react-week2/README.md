@@ -1,12 +1,12 @@
-# React + Vite
+# SignupForm 컴포넌트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Zod + React Hook Form을 사용하여 회원가입 폼을 구현한 컴포넌트입니다.  
+재사용성을 고려해 **상태 없는 InputField**와 **상태 관리 컴포넌트(SignupForm)** 로 분리되어 있습니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 설치 방법
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install react-hook-form zod @hookform/resolvers
+```
